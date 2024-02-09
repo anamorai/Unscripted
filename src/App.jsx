@@ -56,10 +56,6 @@ function App() {
         <h1>Manage your productivity here</h1>
         <Grid />
       </div>
-      <DndContext sensors={ sensors } collisionDetection={ closestCorners } onDragEnd={ handleDragEnd }>
-        <TodoList todos={ todos } checkTodo={ checkTodo } deleteTodo={ deleteTodo } />
-      </DndContext>
-      <TodoForm addTodo={ addTodo } />
     </>
   )
 }
