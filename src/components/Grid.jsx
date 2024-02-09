@@ -18,13 +18,13 @@ export default function ResponsiveGrid() {
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item> <TodoComplete/> </Item>
+                    <Item> To Do List: <TodoComplete/> </Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item>Shopping</Item>
+                    <Item>Shopping: <TodoComplete/></Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item>Goals</Item>
+                    <Item>Goals: <TodoComplete/></Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
                     <Item>API 1</Item>
