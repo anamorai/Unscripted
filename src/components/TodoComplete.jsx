@@ -1,14 +1,14 @@
 import TodoForm from "./TodoForm"
 import TodoList from "./TodoList"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { v4 } from "uuid";
 import { DndContext, KeyboardSensor, PointerSensor, TouchSensor, closestCorners, useSensor, useSensors } from "@dnd-kit/core";
 import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 
 
 
-export default function TodoComplete() {
 
+export default function TodoComplete() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (text) => {
