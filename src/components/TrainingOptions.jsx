@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Paper, Typography, Checkbox, FormControlLabel, Button } from '@material-ui/core';
+import { Grid, Paper, Typography, Checkbox, FormControlLabel, Button } from '@mui/material';
 
 const options = ["Chest", "Back", "Legs", "Abs", "Arms", "Stretching"];
 
