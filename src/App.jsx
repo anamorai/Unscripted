@@ -9,6 +9,7 @@ function App() {
   const [bodyPart, setBodyPart] = useState("");
   const [dataFromRecipeAPI, setDataFromRecipeAPI] = useState([]);
   const [dataFromTrainingAPI, setDataFromTrainingAPI] = useState([]);
+  const [dataFromQuoteAPI, setDataFromQuoteAPI] = useState([]);
 
   const fetchAPI = async (url) => {
     const options = {
@@ -41,8 +42,12 @@ function App() {
   }, [bodyPart]);
 
   useEffect( () => {
-    fetchAPI("http://localhost:8000/quote");
-  }, []);
+    const fetchingQuoteAPI = async () => {
+      const data = await fetchAPI("http://localhost:8000/quote");
+      setDataFromQuoteAPI(data);
+    } 
+    fetchingQuoteAPI();
+  }, [dataFromQuoteAPI]);
 
   return (
     <>

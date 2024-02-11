@@ -1,10 +1,12 @@
-import React from 'react';
 import { Grid, Paper, Typography, Checkbox, FormControlLabel, Button } from '@mui/material';
+import RecipeCard from "./RecipeCard";
 
 const cookingOptions = ["Breakfast", "Lunch", "Dinner", "Vegan", "Healthy", "Vegetarian"];
 
 const CookingOptions = ({diet, setDiet, dataFromRecipeAPI}) => {
-  console.log(dataFromRecipeAPI);
+
+  // const { recipes } = dataFromRecipeAPI;
+
 
   const handleToggleOption = (option) => {
     setDiet(option);
@@ -33,6 +35,9 @@ const CookingOptions = ({diet, setDiet, dataFromRecipeAPI}) => {
             </Grid>
           </Grid>
         </Paper>
+        {diet && recipes && (
+          recipes?.map(recipe => <RecipeCard title={recipe.title} image={recipe.image} summary={recipe.summary} ingrediants={recipe.ingredients} />)
+        )}
       </Grid>
       {!diet && (
         <>
