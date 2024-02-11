@@ -4,34 +4,37 @@ import axios from "axios";
 
 function App() {
 
-  const fetchRecipeAPI = async (url) => {
+  const fetchAPI = async (url) => {
     const options = {
       method: "GET",
       url,
   };
 
-  try {
-    const response = await axios.request(options);
-    console.log(response.data);
-  } catch (error) {
-    console.error(error);
-  }
+    try {
+      const response = await axios.request(options);
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   useEffect( () => {
-    fetchRecipeAPI("http://localhost:8000/random-vegaterian");
+    fetchAPI("http://localhost:8000/random-vegaterian");
   }, []);
 
   useEffect( () => {
-    fetchRecipeAPI("http://localhost:8000/biceps");
+    fetchAPI("http://localhost:8000/biceps");
   }, []);
 
+  useEffect( () => {
+    fetchAPI("http://localhost:8000/quote");
+  }, []);
 
   return (
     <>
       <div>
         <h1>Manage your productivity here</h1>
-        <Grid />
+        <Grid data="Hello world" />
       </div>
     </>
   )
