@@ -1,17 +1,17 @@
 import React from 'react';
 import { Grid, Paper, Typography, Checkbox, FormControlLabel, Button } from '@material-ui/core';
 
-const cookingOptions = ["Breakfast", "Lunch", "Dinner", "Vegan", "Gluten Free", "Vegetarian"];
+const cookingOptions = ["Breakfast", "Lunch", "Dinner", "Vegan", "Healthy", "Vegetarian"];
 
-const CookingOptions = () => {
-  const [selectedOption, setSelectedOption] = React.useState(null);
+const CookingOptions = ({diet, setDiet}) => {
+
 
   const handleToggleOption = (option) => {
-    setSelectedOption(option);
+    setDiet(option);
   };
 
   const handleGoBack = () => {
-    setSelectedOption(null);
+    setDiet(null);
   };
 
   return (
@@ -19,7 +19,7 @@ const CookingOptions = () => {
       <Grid item xs={12}>
         <Paper>
           <Grid container justifyContent="space-between" alignItems="center">
-            {selectedOption && (
+            {diet && (
               <Grid item>
                 <Button onClick={handleGoBack}>
                   Back
@@ -28,23 +28,23 @@ const CookingOptions = () => {
             )}
             <Grid item>
               <Typography variant="h5" align="center">
-                {selectedOption ? `Top 3 recipes for ${selectedOption}` : "What would you like to cook today?"}
+                {diet ? `Top 3 recipes for ${diet}` : "What would you like to cook today?"}
               </Typography>
             </Grid>
           </Grid>
         </Paper>
       </Grid>
-      {!selectedOption && (
+      {!diet && (
         <>
           <Grid item xs={6}>
             <Grid container direction="column" spacing={1}>
               {cookingOptions.slice(0, 3).map((option, index) => (
                 <Grid item key={index}>
                   <FormControlLabel
-                    control={<Checkbox checked={selectedOption === option} onChange={() => handleToggleOption(option)} />}
+                    control={<Checkbox checked={diet === option} onChange={() => handleToggleOption(option)} />}
                     label={option}
                     style={{ width: '100%' }}
-                    disabled={!!selectedOption}
+                    disabled={!!diet}
                   />
                 </Grid>
               ))}
@@ -55,10 +55,10 @@ const CookingOptions = () => {
               {cookingOptions.slice(3).map((option, index) => (
                 <Grid item key={index}>
                   <FormControlLabel
-                    control={<Checkbox checked={selectedOption === option} onChange={() => handleToggleOption(option)} />}
+                    control={<Checkbox checked={diet === option} onChange={() => handleToggleOption(option)} />}
                     label={option}
                     style={{ width: '100%' }}
-                    disabled={!!selectedOption}
+                    disabled={!!diet}
                   />
                 </Grid>
               ))}

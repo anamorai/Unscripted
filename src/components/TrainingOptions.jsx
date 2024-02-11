@@ -3,15 +3,15 @@ import { Grid, Paper, Typography, Checkbox, FormControlLabel, Button } from '@ma
 
 const options = ["Chest", "Back", "Legs", "Abs", "Arms", "Stretching"];
 
-const TrainingOptions = () => {
-  const [selectedOption, setSelectedOption] = React.useState(null);
+const TrainingOptions = ({bodyPart, setBodyPart}) => {
+
 
   const handleToggleOption = (option) => {
-    setSelectedOption(option);
+    setBodyPart(option);
   };
 
   const handleGoBack = () => {
-    setSelectedOption(null);
+    setBodyPart(null);
   };
 
   return (
@@ -19,7 +19,7 @@ const TrainingOptions = () => {
       <Grid item xs={12}>
         <Paper>
           <Grid container justifyContent="space-between" alignItems="center">
-            {selectedOption && (
+            {bodyPart && (
               <Grid item>
                 <Button onClick={handleGoBack}>
                   Back
@@ -28,23 +28,23 @@ const TrainingOptions = () => {
             )}
             <Grid item>
               <Typography variant="h5" align="center">
-                {selectedOption ? `Top 3 exercises for ${selectedOption}` : "What would you like to train today?"}
+                {bodyPart ? `Top 3 exercises for ${bodyPart}` : "What would you like to train today?"}
               </Typography>
             </Grid>
           </Grid>
         </Paper>
       </Grid>
-      {!selectedOption && (
+      {!bodyPart && (
         <>
           <Grid item xs={6}>
             <Grid container direction="column" spacing={1}>
               {options.slice(0, 3).map((option, index) => (
                 <Grid item key={index}>
                   <FormControlLabel
-                    control={<Checkbox checked={selectedOption === option} onChange={() => handleToggleOption(option)} />}
+                    control={<Checkbox checked={bodyPart === option} onChange={() => handleToggleOption(option)} />}
                     label={option}
                     style={{ width: '100%' }}
-                    disabled={!!selectedOption}
+                    disabled={!!bodyPart}
                   />
                 </Grid>
               ))}
@@ -55,10 +55,10 @@ const TrainingOptions = () => {
               {options.slice(3).map((option, index) => (
                 <Grid item key={index}>
                   <FormControlLabel
-                    control={<Checkbox checked={selectedOption === option} onChange={() => handleToggleOption(option)} />}
+                    control={<Checkbox checked={bodyPart === option} onChange={() => handleToggleOption(option)} />}
                     label={option}
                     style={{ width: '100%' }}
-                    disabled={!!selectedOption}
+                    disabled={!!bodyPart}
                   />
                 </Grid>
               ))}

@@ -16,8 +16,8 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-export default function ResponsiveGrid({data}) {
-    console.log(data);
+export default function ResponsiveGrid({diet, setDiet, bodyPart, setBodyPart}) {
+
     return (
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
@@ -31,10 +31,10 @@ export default function ResponsiveGrid({data}) {
                     <Item>To do list:<TodoComplete/></Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item><TrainingOptions/></Item>
+                    <Item><TrainingOptions bodyPart={bodyPart} setBodyPart={setBodyPart} /></Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item><CookingOptions/></Item>
+                    <Item><CookingOptions diet={diet} setDiet={setDiet} /></Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
                     <Item>API 3</Item>

@@ -1,8 +1,11 @@
 import Grid from './components/Grid';
 import { useEffect } from 'react';
 import axios from "axios";
+import { useState } from 'react';
 
 function App() {
+  const [diet, setDiet] = useState("");
+  const [bodyPart, setBodyPart] = useState("");
 
   const fetchAPI = async (url) => {
     const options = {
@@ -19,12 +22,12 @@ function App() {
   }
 
   useEffect( () => {
-    fetchAPI("http://localhost:8000/random-vegaterian");
-  }, []);
+    fetchAPI(`http://localhost:8000/${diet}`);
+  }, [diet]);
 
   useEffect( () => {
-    fetchAPI("http://localhost:8000/biceps");
-  }, []);
+    fetchAPI(`http://localhost:8000/${bodyPart}`);
+  }, [bodyPart]);
 
   useEffect( () => {
     fetchAPI("http://localhost:8000/quote");
@@ -34,7 +37,7 @@ function App() {
     <>
       <div>
         <h1>Manage your productivity here</h1>
-        <Grid data="Hello world" />
+        <Grid diet={diet} setDiet={setDiet} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
       </div>
     </>
   )
