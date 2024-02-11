@@ -18,7 +18,7 @@ const TrainingOptions = () => {
     <Grid container spacing={3}>
       <Grid item xs={12}>
         <Paper>
-          <Grid container justify="space-between" alignItems="center">
+          <Grid container justifyContent="space-between" alignItems="center">
             {selectedOption && (
               <Grid item>
                 <Button onClick={handleGoBack}>
