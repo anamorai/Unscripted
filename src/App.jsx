@@ -46,9 +46,10 @@ function App() {
 
   return (
     <>
-      <div>
+          <div style={{ marginBottom: '50px' }}>
         <Header />
-        <h1>Manage your productivity here</h1>
+      </div>
+      <div>
         <Grid diet={diet} setDiet={setDiet} bodyPart={bodyPart} setBodyPart={setBodyPart} dataFromRecipeAPI={dataFromRecipeAPI} dataFromTrainingAPI={dataFromTrainingAPI} />
       </div>
     </>
