@@ -4,6 +4,9 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import TodoComplete from "./TodoComplete"
+import TodoDrag from "./TodoDrag"
+import TrainingOptions from "./TrainingOptions"
+import CookingOptions from "./CookingOptions"
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -18,19 +21,19 @@ export default function ResponsiveGrid() {
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item> To Do List: <TodoComplete/> </Item>
+                    <Item>Exercises I will do today:<TodoDrag/> </Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item>Shopping: <TodoComplete/></Item>
+                    <Item>Ingredients I need to buy:<TodoDrag/></Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item>Goals: <TodoComplete/></Item>
+                    <Item>To do list:<TodoComplete/></Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item>API 1</Item>
+                    <Item><TrainingOptions/></Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item>API 2</Item>
+                    <Item><CookingOptions/></Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
                     <Item>API 3</Item>

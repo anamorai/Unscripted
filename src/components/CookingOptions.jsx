@@ -1,0 +1,73 @@
+import React from 'react';
+import { Grid, Paper, Typography, Checkbox, FormControlLabel, Button } from '@material-ui/core';
+
+const cookingOptions = ["Breakfast", "Lunch", "Dinner", "Vegan", "Gluten Free", "Vegetarian"];
+
+const CookingOptions = () => {
+  const [selectedOption, setSelectedOption] = React.useState(null);
+
+  const handleToggleOption = (option) => {
+    setSelectedOption(option);
+  };
+
+  const handleGoBack = () => {
+    setSelectedOption(null);
+  };
+
+  return (
+    <Grid container spacing={3}>
+      <Grid item xs={12}>
+        <Paper>
+          <Grid container justify="space-between" alignItems="center">
+            {selectedOption && (
+              <Grid item>
+                <Button onClick={handleGoBack}>
+                  Back
+                </Button>
+              </Grid>
+            )}
+            <Grid item>
+              <Typography variant="h5" align="center">
+                {selectedOption ? `Top 3 recipes for ${selectedOption}` : "What would you like to cook today?"}
+              </Typography>
+            </Grid>
+          </Grid>
+        </Paper>
+      </Grid>
+      {!selectedOption && (
+        <>
+          <Grid item xs={6}>
+            <Grid container direction="column" spacing={1}>
+              {cookingOptions.slice(0, 3).map((option, index) => (
+                <Grid item key={index}>
+                  <FormControlLabel
+                    control={<Checkbox checked={selectedOption === option} onChange={() => handleToggleOption(option)} />}
+                    label={option}
+                    style={{ width: '100%' }}
+                    disabled={!!selectedOption}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+          <Grid item xs={6}>
+            <Grid container direction="column" spacing={1}>
+              {cookingOptions.slice(3).map((option, index) => (
+                <Grid item key={index}>
+                  <FormControlLabel
+                    control={<Checkbox checked={selectedOption === option} onChange={() => handleToggleOption(option)} />}
+                    label={option}
+                    style={{ width: '100%' }}
+                    disabled={!!selectedOption}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+        </>
+      )}
+    </Grid>
+  );
+};
+
+export default CookingOptions;
