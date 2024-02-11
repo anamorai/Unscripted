@@ -1,3 +1,4 @@
+import Header from './components/Header';
 import Grid from './components/Grid';
 import { useEffect } from 'react';
 import axios from "axios";
@@ -46,6 +47,7 @@ function App() {
   return (
     <>
       <div>
+        <Header />
         <h1>Manage your productivity here</h1>
         <Grid diet={diet} setDiet={setDiet} bodyPart={bodyPart} setBodyPart={setBodyPart} dataFromRecipeAPI={dataFromRecipeAPI} dataFromTrainingAPI={dataFromTrainingAPI} />
       </div>
