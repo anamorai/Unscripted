@@ -6,6 +6,8 @@ import { useState } from 'react';
 function App() {
   const [diet, setDiet] = useState("");
   const [bodyPart, setBodyPart] = useState("");
+  const [dataFromRecipeAPI, setDataFromRecipeAPI] = useState([]);
+  const [dataFromTrainingAPI, setDataFromTrainingAPI] = useState([]);
 
   const fetchAPI = async (url) => {
     const options = {
@@ -15,18 +17,26 @@ function App() {
 
     try {
       const response = await axios.request(options);
-      console.log(response.data);
+      return response.data;
     } catch (error) {
       console.error(error);
     }
   }
 
   useEffect( () => {
-    fetchAPI(`http://localhost:8000/${diet}`);
+    const fetchRecipeAPI = async () => {
+      const data = await fetchAPI(`http://localhost:8000/${diet}`);
+      setDataFromRecipeAPI(data);
+    }
+    fetchRecipeAPI();
   }, [diet]);
 
   useEffect( () => {
-    fetchAPI(`http://localhost:8000/${bodyPart}`);
+    const fetchTrainingAPI = async () => {
+      const data = await fetchAPI(`http://localhost:8000/${bodyPart}`);
+      setDataFromTrainingAPI(data);
+    }
+    fetchTrainingAPI();
   }, [bodyPart]);
 
   useEffect( () => {
@@ -37,7 +47,7 @@ function App() {
     <>
       <div>
         <h1>Manage your productivity here</h1>
-        <Grid diet={diet} setDiet={setDiet} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
+        <Grid diet={diet} setDiet={setDiet} bodyPart={bodyPart} setBodyPart={setBodyPart} dataFromRecipeAPI={dataFromRecipeAPI} dataFromTrainingAPI={dataFromTrainingAPI} />
       </div>
     </>
   )

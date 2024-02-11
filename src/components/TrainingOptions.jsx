@@ -3,8 +3,8 @@ import { Grid, Paper, Typography, Checkbox, FormControlLabel, Button } from '@ma
 
 const options = ["Chest", "Back", "Legs", "Abs", "Arms", "Stretching"];
 
-const TrainingOptions = ({bodyPart, setBodyPart}) => {
-
+const TrainingOptions = ({bodyPart, setBodyPart, dataFromTrainingAPI}) => {
+  console.log(dataFromTrainingAPI);
 
   const handleToggleOption = (option) => {
     setBodyPart(option);

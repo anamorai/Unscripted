@@ -3,8 +3,8 @@ import { Grid, Paper, Typography, Checkbox, FormControlLabel, Button } from '@ma
 
 const cookingOptions = ["Breakfast", "Lunch", "Dinner", "Vegan", "Healthy", "Vegetarian"];
 
-const CookingOptions = ({diet, setDiet}) => {
-
+const CookingOptions = ({diet, setDiet, dataFromRecipeAPI}) => {
+  console.log(dataFromRecipeAPI);
 
   const handleToggleOption = (option) => {
     setDiet(option);
