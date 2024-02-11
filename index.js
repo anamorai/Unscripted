@@ -1,12 +1,35 @@
-const PORT = 8000;
 import express from "express";
 import cors from "cors";
 import axios from "axios";
 import "dotenv/config";
 
+const PORT = 8000;
+
 const app = express();
 
 app.use(cors());
+
+app.get("/quote", async (req, res) => {
+  const options = {
+    method: "GET",
+    url: "https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote",
+    params: {
+      token: "ipworld.info",
+    },
+    headers: {
+      "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
+      "X-RapidAPI-Host":
+        "quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com",
+    },
+  };
+
+  try {
+    const response = await axios.request(options);
+    res.json(response.data);
+  } catch (error) {
+    console.error(error);
+  }
+});
 
 app.get("/random-vegaterian", async (req, res) => {
   const options = {
