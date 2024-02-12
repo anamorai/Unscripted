@@ -1,22 +1,25 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+// Header.js
+import React from "react";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Switch from "@mui/material/Switch";
 
-export default function ButtonAppBar() {
+const Header = ({ mode, handleChange }) => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Drag and Drop Dashboard
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          Productivity Manager
+        </Typography>
+        <Switch
+          checked={mode}
+          onChange={handleChange}
+          inputProps={{ "aria-label": "controlled" }}
+        />
+      </Toolbar>
+    </AppBar>
   );
-}
+};
+
+export default Header;
