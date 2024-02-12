@@ -30,10 +30,10 @@ export default function ResponsiveGrid({diet, setDiet, bodyPart, setBodyPart, da
                     <Item>To do list:<TodoComplete/></Item>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item><TrainingOptions bodyPart={bodyPart} setBodyPart={setBodyPart} dataFromTrainingAPI={dataFromTrainingAPI} /></Item>
+                    <TrainingOptions bodyPart={bodyPart} setBodyPart={setBodyPart} dataFromTrainingAPI={dataFromTrainingAPI} />
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item><CookingOptions diet={diet} setDiet={setDiet} dataFromRecipeAPI={dataFromRecipeAPI} /></Item>
+                    <CookingOptions diet={diet} setDiet={setDiet} dataFromRecipeAPI={dataFromRecipeAPI} />
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
                     <Item>API 3</Item>
