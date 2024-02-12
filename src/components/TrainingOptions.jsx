@@ -18,8 +18,8 @@ const TrainingOptions = () => {
     <Box
       sx={{
         borderRadius: 8,
-        boxShadow: 3, // You can adjust the shadow strength (0 to 24)
-        p: 2, // Add padding as needed
+        boxShadow: 3, 
+        p: 2, 
       }}
     >
       <Grid container spacing={3}>

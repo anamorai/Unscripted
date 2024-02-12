@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Paper, Switch } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import useMediaQuery from '@mui/material/useMediaQuery';
+
 function App() {
   const [diet, setDiet] = useState("");
   const [bodyPart, setBodyPart] = useState("");
@@ -59,6 +60,7 @@ function App() {
     }
     fetchingQuoteAPI();
   }, [dataFromQuoteAPI]);
+  
   return (
     <>
       <ThemeProvider theme={appTheme}>
