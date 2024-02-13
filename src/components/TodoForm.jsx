@@ -23,12 +23,12 @@ const TodoForm = ({addTodo}) => {
     }
 
   return (
-    <Container>
+    <Container style={{ marginBottom: 15, padding: '8px' }}>
       <form onSubmit={handleSubmit}>
-        <FormControl>
+        <FormControl fullWidth={true}>
             <TextField
                 id="standard-basic"
-                label="What you need to do?"
+                label="What do you need to do?"
                 variant="filled"
                 required={true}
                 value={task}
@@ -36,7 +36,7 @@ const TodoForm = ({addTodo}) => {
 
             />
             <Button
-                variant='contained' 
+                variant='outlined' 
                 color='primary' 
                 type='submit'
                 style={{marginTop: 5}}

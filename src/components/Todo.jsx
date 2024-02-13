@@ -33,31 +33,26 @@ const Todo = ({ title, checkTodo, deleteTodo, id, isComplited }) => {
   return (
     <>
       <Container
-        ref={ setNodeRef }
-        { ...attributes }
-        { ...listeners }
-        style={ style }
+        ref={setNodeRef}
+        {...attributes}
+        {...listeners}
+        style={style}
       >
-        <Card
-          variant='outlined'
-          style={ { marginBottom: 25, background: "lightblue" } }
-        >
-          <CardContent>
+        <Card variant='outlined' style={{ marginBottom: 15, borderColor: "black" }} fullWidth={true}>
+          <CardContent style={{ padding: '8px', width: '85%' }}>
             <Typography
-              variant='h5'
-              component='h2'
-              style={ todoStyle }
+              variant='body1'
+              style={todoStyle}
             >
-              <IconButton onDoubleClick={ () => checkTodo(id) }>
-                <Check style={ { color: "green" } } />
+              <IconButton onDoubleClick={() => checkTodo(id)}>
+                <Check style={{ color: "green" , fontSize: '20px' }} />
               </IconButton>
-              { title }
-              <IconButton onDoubleClick={ handleDelete } style={ { float: "right" } }>
-                <Delete style={ { color: "red" } } />
+              {title}
+              <IconButton onDoubleClick={handleDelete} style={{ float: "right" }}>
+                <Delete style={{ color: "red" , fontSize: '20px' }} />
               </IconButton>
             </Typography>
           </CardContent>
-
         </Card>
       </Container>
     </>
