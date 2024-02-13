@@ -36,7 +36,7 @@ const fetchRecipeAPI = async (diet, res) => {
     url: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random",
     params: {
       diet,
-      number: "5",
+      number: "3",
     },
     headers: {
       "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
