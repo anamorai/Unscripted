@@ -117,8 +117,8 @@ app.get("/abs", async (req, res) => {
   fetchTrainingAPI("abs", res);
 });
 
-app.get("/arms", async (req, res) => {
-  fetchTrainingAPI("arms", res);
+app.get("/shoulders", async (req, res) => {
+  fetchTrainingAPI("shoulders", res);
 });
 
 app.get("/stretching", async (req, res) => {

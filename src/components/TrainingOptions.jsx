@@ -3,7 +3,7 @@ import { Grid, Paper, Typography, Checkbox, FormControlLabel, Button, Box, Circu
 import axios from "axios";
 import { v4 } from "uuid";
 
-const options = ["Chest", "Back", "Legs", "Abs", "Arms", "Stretching"];
+const options = ["Chest", "Back", "Legs", "Abs", "Shoulders", "Stretching"];
 
 const TrainingOptions = () => {
   const [bodyPart, setBodyPart] = useState("");
