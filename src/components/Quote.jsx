@@ -7,21 +7,6 @@ import './QuoteComponent.css'; // Import the CSS file for any additional styling
 const QuoteComponent = () => {
   const [quoteData, setQuoteData] = useState({ quote: '', author: '' });
 
-  useEffect(() => {
-    // Fetch quote data from your API
-    const fetchQuote = async () => {
-      try {
-        const response = await fetch('https://example.com/api/quote');
-        const data = await response.json();
-        setQuoteData(data); // Assuming the API returns an object with 'quote' and 'author' properties
-      } catch (error) {
-        console.error('Error fetching quote:', error);
-      }
-    };
-
-    fetchQuote();
-  }, []);
-
   return (
     <Box
       sx={{
