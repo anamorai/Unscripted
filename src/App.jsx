@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { Paper } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Footer from './components/Footer';
 
 function App() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -32,6 +34,7 @@ function App() {
           <div>
             <Grid />
           </div>
+          <Footer />
         </Paper>
       </ThemeProvider>
     </>

@@ -7,9 +7,9 @@ import Switch from "@mui/material/Switch";
 
 const Header = ({ mode, handleChange }) => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ marginBottom: '20px', borderRadius: '15px' }}>
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontSize: { xs: '1.5rem', sm: '2rem' } }}>
           Productivity Manager
         </Typography>
         <Switch
