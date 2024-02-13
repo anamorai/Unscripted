@@ -7,6 +7,7 @@ import ListItem from '@mui/material/ListItem';
 import { v4 } from "uuid";
 
 export default function ActionAreaCard({ title, image, ingredients }) {
+  const ingredientsArr = ingredients.map(ingredient => ingredient.name);
 
   return (
     <Card sx={ { maxWidth: 400, mt: 2 } }>
@@ -24,7 +25,7 @@ export default function ActionAreaCard({ title, image, ingredients }) {
           <Typography variant="body2" color="text.secondary">
 
           </Typography>
-          { ingredients?.map(ingredient => <ListItem key={ v4() }>{ ingredient.name }</ListItem>) }
+          {ingredientsArr.join(", ")}
         </CardContent>
       </CardActionArea>
     </Card>
