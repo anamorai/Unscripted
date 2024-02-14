@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Paper, Typography, Checkbox, FormControlLabel, Button, Box, CircularProgress, ListItem } from '@mui/material';
+import ExerciseCard from "./ExerciseCard";
 import axios from "axios";
 import { v4 } from "uuid";
 
@@ -72,7 +73,7 @@ const TrainingOptions = () => {
             </Grid>
           ) }
           { bodyPart && !loading && (
-            exercises?.slice(0, 3).map(exercise => <ListItem key={ v4() }> Exercise: { exercise["WorkOut"] }</ListItem>)
+            exercises?.slice(0, 3).map(exercise => <ExerciseCard beginnerSets={exercise["Beginner Sets"]} intermediateSets={exercise["Intermediate Sets"]} expertSets={exercise["Expert Sets"]} />)
           ) }
         </Grid>
         { !bodyPart && (
