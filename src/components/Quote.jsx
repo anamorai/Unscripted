@@ -58,7 +58,7 @@ const QuoteComponent = () => {
               sx={{
                 fontSize: 24,
                 fontWeight: 'bold',
-                marginBottom: 5, 
+                marginBottom: 1.5, 
                 textAlign: 'center',
               }}
             >

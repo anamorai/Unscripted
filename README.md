@@ -32,9 +32,8 @@ If you scroll down and enter in the name of a country it will look like this:
 
 ## Badges
 
-![GitHub deployments](https://img.shields.io/github/deployments/OlehProtsak/Unscripted-Travel-Guide/github-pages)
-![GitHub language count](https://img.shields.io/github/languages/count/OlehProtsak/Unscripted-Travel-Guide)
-![GitHub top language](https://img.shields.io/github/languages/top/OlehProtsak/Unscripted-Travel-Guide)
+![GitHub language count](https://img.shields.io/github/languages/count/anamorai/Unscripted)
+![GitHub top language](https://img.shields.io/github/languages/top/anamorai/Unscripted)
 
 ## Features
 
