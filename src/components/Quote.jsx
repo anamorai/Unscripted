@@ -15,7 +15,7 @@ const QuoteComponent = () => {
       setLoading(true);
       const options = {
         method: 'GET',
-        url: 'http://localhost:8000/quote',
+        url: 'https://productivitymanager.netlify.app/quote',
       };
 
       try {
