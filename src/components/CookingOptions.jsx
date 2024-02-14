@@ -19,7 +19,7 @@ const CookingOptions = () => {
       setLoading(true);
       const options = {
         method: 'GET',
-        url: `https://productivitymanager.netlify.app/${diet}`,
+        url: `http://localhost:8000/${diet}`,
       };
 
       try {

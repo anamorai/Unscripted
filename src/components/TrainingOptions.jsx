@@ -17,7 +17,7 @@ const TrainingOptions = () => {
       setLoading(true);
       const options = {
         method: 'GET',
-        url: `https://productivitymanager.netlify.app/${bodyPart}`,
+        url: `http://localhost:8000/${bodyPart}`,
       };
 
       try {
