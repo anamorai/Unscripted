@@ -28,7 +28,7 @@ const TodoForm = ({addTodo}) => {
         <FormControl fullWidth={true}>
             <TextField
                 id="standard-basic"
-                label="What do you need to do?"
+                label="Leave a note here..."
                 variant="filled"
                 required={true}
                 value={task}

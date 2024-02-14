@@ -26,14 +26,9 @@ function App() {
   return (
     <>
       <ThemeProvider theme={ appTheme }>
-        <Paper elevation={ 0 } sx={ { height: "100vh" } } square>
+        <Paper elevation={ 0 } square>
           <Header mode={ mode } handleChange={ handleChange } />
-          <div style={ { marginBottom: '50px' } }>
-            {/* Other content */ }
-          </div>
-          <div>
             <Grid />
-          </div>
           <Footer />
         </Paper>
       </ThemeProvider>
