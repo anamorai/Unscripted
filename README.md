@@ -23,11 +23,11 @@ Currently, two official plugins are available:
 
 Once you open the URL, you will see the following: 
 
-![This is the first thing you will see after opening the website](assets/images/Website1.png)
+![This is the first thing you will see after opening the website](Assets/Images/Light.png)
 
-If you scroll down and enter in the name of a country it will look like this:
+If you activate dark mode it will look like this:
 
-![This is how it will look after you enter in a country name](assets/images/Website.png)
+![This is how dark mode looks](Assets/Images/Dark.png)
 
 
 ## Badges
