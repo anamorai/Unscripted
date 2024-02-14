@@ -1,9 +1,10 @@
 # Unscripted
 
-We have created a Productivity App that will allow a user to keep track of their daily exercise, nutrition and goals. 
+Staying organised is no easy task, that’s why we’ve created the productivity manager.
 
-* Has a dashboard with form inputs.
-* Allows a user ....
+With the productivity manager, you can plan your next exercise for any part of the body, get your next meal stirring with recipe ideas, and keep track of your day-to-day tasks with the configurable to do list.
+
+We made this dashboard to help you keep on top of your fitness, plan your next meal, and keep yourself organised.
 
 ## Installation
 
