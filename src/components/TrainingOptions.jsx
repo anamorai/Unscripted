@@ -73,7 +73,7 @@ const TrainingOptions = () => {
             </Grid>
           ) }
           { bodyPart && !loading && (
-            exercises?.slice(0, 3).map(exercise => <ExerciseCard beginnerSets={exercise["Beginner Sets"]} intermediateSets={exercise["Intermediate Sets"]} expertSets={exercise["Expert Sets"]} />)
+            exercises?.slice(0, 3).map(exercise => <ExerciseCard workOut={exercise["WorkOut"]} explaination={exercise["Explaination"]} beginnerSets={exercise["Beginner Sets"]} intermediateSets={exercise["Intermediate Sets"]} expertSets={exercise["Expert Sets"]} />)
           ) }
         </Grid>
         { !bodyPart && (
