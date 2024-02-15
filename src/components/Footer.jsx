@@ -15,7 +15,7 @@ const Footer = () => {
         <IconButton href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-instagram" style={{ fontSize: '2rem' }}></i>
         </IconButton>
-        <IconButton href="mailto:your.email@gmail.com" target="_blank" rel="noopener noreferrer">
+        <IconButton href="mailto:productivitymanager@gmail.com" target="_blank" rel="noopener noreferrer">
           <i className="fas fa-envelope" style={{ fontSize: '2rem' }}></i>
         </IconButton>
       </Toolbar>
