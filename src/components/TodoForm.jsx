@@ -4,13 +4,8 @@ import Container from '@mui/material/Container';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-
-
-
 const TodoForm = ({addTodo}) => {
     const [task, setTask] = useState("");
-
-
 
     const handleSubmit = (e) => {
         e.preventDefault();

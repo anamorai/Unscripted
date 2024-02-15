@@ -38,7 +38,7 @@ const QuoteComponent = () => {
         boxShadow: 3,
         p: 2,
         textAlign: 'left',
-        lineHeight: '1.5', // Adjust line height for spacing
+        lineHeight: '1.5',
       }}
     >
       {loading && <CircularProgress />}
@@ -56,9 +56,9 @@ const QuoteComponent = () => {
             <Typography
               variant="body1"
               sx={{
-                fontSize: 24,
+                fontSize: 30,
                 fontWeight: 'bold',
-                marginBottom: 1.5, 
+                marginBottom: 8, 
                 textAlign: 'center',
               }}
             >

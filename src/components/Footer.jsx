@@ -20,7 +20,8 @@ const Footer = () => {
         </IconButton>
       </Toolbar>
       <Typography variant="h6" component="div" align="center" color="inherit" sx={{ flexGrow: 1 }}>
-      Productivity. Brought to you by Alan, Anastasia, and Oleh.
+      Productivity. <br />
+      Brought to you by Alan, Anastasia, and Oleh.
         </Typography>
       <div style={{ marginBottom: '20px' }}></div>
     </AppBar>

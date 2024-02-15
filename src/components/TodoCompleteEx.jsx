@@ -6,33 +6,31 @@ import { DndContext, KeyboardSensor, PointerSensor, TouchSensor, closestCorners,
 import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 
 export default function TodoCompleteEx() {
-  const localStorageKey = "todosEx"; // Unique key for local storage in TodoCompleteEx
+  const localStorageKey = "todosEx";
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    // Retrieve todos from local storage when component mounts
     const savedTodos = localStorage.getItem(localStorageKey);
     if (savedTodos) {
-      // Parse and update the state with the saved todos
       const parsedTodos = JSON.parse(savedTodos);
       setTodos(parsedTodos);
     }
-  }, [localStorageKey]); // Include localStorageKey in the dependency array
+  }, [localStorageKey]); 
 
   const addTodo = (text) => {
     const newTodo = { id: v4(), title: text, isComplited: false };
     setTodos([...todos, newTodo]);
-    saveTodos([...todos, newTodo]); // Save updated todos to local storage
+    saveTodos([...todos, newTodo]);
   };
 
   const checkTodo = (id) => {
     setTodos(todos.map((todo) => (todo.id === id ? { ...todo, isComplited: !todo.isComplited } : todo)));
-    saveTodos(todos); // Save updated todos to local storage
+    saveTodos(todos);
   };
 
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => !(todo.id === id)));
-    saveTodos(todos.filter((todo) => !(todo.id === id))); // Save updated todos to local storage
+    saveTodos(todos.filter((todo) => !(todo.id === id)));
   };
 
   const getTodoPos = (id) => todos.findIndex((todo) => todo.id === id);
@@ -49,7 +47,7 @@ export default function TodoCompleteEx() {
       return arrayMove(todos, originalPos, newPos);
     });
 
-    saveTodos(todos); // Save updated todos to local storage
+    saveTodos(todos);
   };
 
   const saveTodos = (todosToSave) => {
