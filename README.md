@@ -8,7 +8,7 @@ We made this dashboard to help you keep on top of your fitness, plan your next m
 
 ## Installation
 
-To open the project please follow this link: 
+To open the project please follow this link: https://productivitymanager.netlify.app/
 
 ## React + Vite
 
@@ -34,6 +34,7 @@ If you activate dark mode it will look like this:
 
 ![GitHub language count](https://img.shields.io/github/languages/count/anamorai/Unscripted)
 ![GitHub top language](https://img.shields.io/github/languages/top/anamorai/Unscripted)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/223e60e0-052e-4c09-8b3b-994d5b6f1b28/deploy-status)](https://app.netlify.com/sites/productivitymanager/deploys)
 
 ## Features
 
