@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import TodoComplete from "./TodoComplete"
+import TodoCompleteEx from "./TodoCompleteEx"
+import TodoCompleteTrain from "./TodoCompleteTrain"
 import TrainingOptions from "./TrainingOptions"
 import CookingOptions from "./CookingOptions"
 import QuoteComponent from "./Quote"
@@ -30,14 +32,14 @@ export default function ResponsiveGrid() {
         <Grid item xs={12} sm={4} md={4}>
           <RoundedItem>
             <Typography variant="h5" align="center">
-              Exercises I will do today:<TodoComplete />
+              Exercises I will do today:<TodoCompleteEx />
             </Typography>
           </RoundedItem>
         </Grid>
         <Grid item xs={12} sm={4} md={4}>
           <RoundedItem>
             <Typography variant="h5" align="center">
-              Ingredients I need to buy:<TodoComplete />
+              Ingredients I need to buy:<TodoCompleteTrain />
             </Typography>
           </RoundedItem>
         </Grid>

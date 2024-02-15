@@ -5,8 +5,8 @@ import { v4 } from "uuid";
 import { DndContext, KeyboardSensor, PointerSensor, TouchSensor, closestCorners, useSensor, useSensors } from "@dnd-kit/core";
 import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 
-export default function TodoComplete() {
-  const localStorageKey = "todos"; // Unique key for local storage
+export default function TodoCompleteEx() {
+  const localStorageKey = "todosEx"; // Unique key for local storage in TodoCompleteEx
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
