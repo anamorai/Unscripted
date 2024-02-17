@@ -18,8 +18,16 @@ const CookingOptions = () => {
     const fetchRecipeAPI = async () => {
       setLoading(true);
       const options = {
-        method: 'GET',
-        url: `http://localhost:8000/${diet}`,
+        method: "GET",
+        url: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random",
+        params: {
+          diet,
+          number: "3",
+        },
+        headers: {
+          "X-RapidAPI-Key": "f4143fa61cmshf9bc49eb2e901d5p1db820jsn655b1ffc1b4e",
+          "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+        },
       };
 
       try {

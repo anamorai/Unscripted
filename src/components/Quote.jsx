@@ -14,8 +14,16 @@ const QuoteComponent = () => {
     const fetchQuoteAPI = async () => {
       setLoading(true);
       const options = {
-        method: 'GET',
-        url: 'http://localhost:8000/quote',
+        method: "GET",
+        url: "https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote",
+        params: {
+          token: "ipworld.info",
+        },
+        headers: {
+          "X-RapidAPI-Key": "f4143fa61cmshf9bc49eb2e901d5p1db820jsn655b1ffc1b4e",
+          "X-RapidAPI-Host":
+            "quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com",
+        },
       };
 
       try {
